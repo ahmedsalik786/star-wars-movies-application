@@ -68,13 +68,13 @@ function Landing() {
           (favMovie) => favMovie.episode_id === movie.episode_id
         ) ? (
           <>
-            Remove from
+            Remove
             <HeartIcon className="w-7 h-5 ml-2 text-red-800" />
           </>
         ) : (
           <>
             Favourite
-            <HeartIcon className="w-5 h-5 ml-2 text-gray-500" />
+            <HeartIcon className="w-7 h-5 ml-2 text-gray-500" />
           </>
         )}
       </button>

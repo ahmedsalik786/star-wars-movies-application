@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../../redux/favSlice";
+import { HeartIcon } from "@heroicons/react/24/outline";
 
 function Fav() {
   const dispatch = useDispatch();
@@ -35,7 +36,10 @@ function Fav() {
         className="py-2 px-5 mt-5 ml-20 me-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center"
         onClick={() => removeFav(movie.episode_id)}
       >
-        Remove
+        <>
+          Remove
+          <HeartIcon className="w-7 h-5 ml-2 text-red-800" />
+        </>
       </button>
     </div>
   ));
