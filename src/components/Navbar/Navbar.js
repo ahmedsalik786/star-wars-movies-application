@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon, HeartIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import logo from "../../asset/logo.png";
+import myImg from "../../asset/myImg.jpg";
 
 const navigation = [{ name: "Home", href: "/", current: true }];
 
@@ -78,7 +79,7 @@ export default function Navbar() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src={myImg}
                         alt=""
                       />
                     </Menu.Button>
