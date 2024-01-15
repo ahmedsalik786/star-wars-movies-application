@@ -67,7 +67,10 @@ export default function Navbar() {
                   >
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">View notifications</span>
-                    <HeartIcon className="h-6 w-6" aria-hidden="true" />
+                    <HeartIcon
+                      className="h-7 w-7  text-red-800"
+                      aria-hidden="true"
+                    />
                   </button>
                 </Link>
 

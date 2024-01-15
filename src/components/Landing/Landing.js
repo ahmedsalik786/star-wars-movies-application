@@ -4,6 +4,7 @@ import { moviesInstance } from "../../utils/axios";
 import { fetchMovies } from "../../redux/moviesSlice";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { add, remove } from "../../redux/favSlice";
+import wallpaper from "../../asset/wallpaper.webp";
 
 function Landing() {
   const dispatch = useDispatch();
@@ -46,19 +47,19 @@ function Landing() {
 
   const cards = moviesList.map((movie) => (
     <div key={movie.episode_id} className="group border-2 relative p-4">
-      <p className="mt-1 text-sm text-gray-500">
+      <p className="mt-1 text-sm text-gray-200">
         <strong>Title:</strong> {movie.title}
       </p>
-      <p className="mt-1 text-sm text-gray-500">
+      <p className="mt-1 text-sm text-gray-200">
         <strong>Director:</strong> {movie.director}
       </p>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-200">
         <strong>Producer:</strong> {movie.producer}
       </p>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-200">
         <strong>Release Date:</strong> {movie.release_date}
       </p>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-200">
         <strong>Overview:</strong> {movie.opening_crawl}
       </p>
 
@@ -86,9 +87,17 @@ function Landing() {
 
   return (
     <>
-      <div className="bg-white">
+      <div
+        className="bg-white"
+        style={{
+          backgroundImage: `url(${wallpaper})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          opacity: 1,
+        }}
+      >
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-100">
             Star Wars Movies
           </h2>
           {isLoading ? (
