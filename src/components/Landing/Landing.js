@@ -58,6 +58,9 @@ function Landing() {
       <p className="text-sm text-gray-500">
         <strong>Release Date:</strong> {movie.release_date}
       </p>
+      <p className="text-sm text-gray-500">
+        <strong>Overview:</strong> {movie.opening_crawl}
+      </p>
 
       <button
         type="button"
