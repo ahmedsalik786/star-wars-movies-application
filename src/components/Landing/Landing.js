@@ -47,7 +47,7 @@ function Landing() {
 
   const cards = moviesList.map((movie) => (
     <div key={movie.episode_id} className="group border-2 relative p-4">
-      <p className="mt-1 text-sm text-gray-200">
+      <p className="mt-1 text-base text-gray-200">
         <strong>Title:</strong> {movie.title}
       </p>
       <p className="mt-1 text-sm text-gray-200">
